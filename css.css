@@ -1,5 +1,20 @@
 a
 {
-	color:#B2628E;
 	text-decoration: none
+}
+a:active
+{
+	color:#399891;
+}
+div.icon
+{
+	width: 50px;
+	float: left;
+}
+div.infor
+{
+	float: left;
+	height: 50px;
+	margin-left: 5px;
+	margin-top: 3px;
 }
