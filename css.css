@@ -1,10 +1,10 @@
+body
+{
+	background: #E0E0E0;
+}
 a
 {
-	text-decoration: none
-}
-a:active
-{
-	color:#399891;
+	text-decoration: none;
 }
 div.icon
 {
@@ -15,6 +15,40 @@ div.infor
 {
 	float: left;
 	height: 50px;
-	margin-left: 5px;
-	margin-top: 3px;
+	margin-left: 40px;
+	margin-top: 15px;
+}
+.findme
+{
+	padding: 10px;
+	background: rgba(255,255,255,0.6);
+	border-radius: 12px;
+}
+#github
+{
+	position: absolute;
+  	left: 20%;
+  	top: 20%;
+}
+#githref
+{
+	color:black;
+}
+#githref:active
+{
+	color:#399891;
+}
+#bangumi
+{
+	position: absolute;
+  	left: 27%;
+  	top: 62%;
+}
+#bgmhref
+{
+	color:#d4237a;
+}
+#bgmhref:active
+{
+	color:#EA81B4;
 }
