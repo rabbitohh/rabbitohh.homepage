@@ -1,3 +1,8 @@
+@font-face
+{ 
+	font-family: "Bradley Hand ITC"; 
+	src:url("font/Bradley Hand ITC TT Italic.ttf"); 
+}
 body::after
 {
 	content: '';
@@ -30,22 +35,35 @@ a
 	width: 250px;
 	height: 250px;
 	margin:auto;
+	margin-bottom: 0;
 }
 #name
 {
-	width: 350px;
+	width: 390px;
 	margin:auto;
 }
 #fname
 {
 	margin: 0;
-	font-size:80px;
-	font-weight:lighter;
-	color:#68B9FF;
+	font-size:90px;
+	font-weight: lighter;
+	font-family: Bradley Hand ITC;
+	color:#3BA4FF;
 }
 img.photo
 {
+	box-shadow: 7px 7px 4px #63BBBD;
+	margin: -5px;
 	border-radius: 20px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #DAE7F8;
+	transition: 1s;
+}
+img.photo:hover
+{
+	box-shadow: 10px 10px 6px #63BBBD;
+	transition: 1s;
 }
 div.icon
 {
@@ -65,9 +83,20 @@ div.infor
 	background: rgba(255,255,255,0.4);
 	border-radius: 12px;
 }
-#github
+#github,#bangumi,#CSDN
 {
 	position: fixed;
+	transition: 1.2s;
+}
+#github:hover,#bangumi:hover,#CSDN:hover
+{
+	-ms-transform:rotate(-7deg);
+	-webkit-transform:rotate(-7deg);
+	transform:rotate(-7deg);
+	transition: 1.2s;
+}
+#github
+{
   	left: 20%;
   	top: 20%;
 }
@@ -83,7 +112,6 @@ div.infor
 {
   	left: 27%;
   	top: 70%;
-	position: fixed;
 }
 #bgmhref
 {
@@ -95,7 +123,6 @@ div.infor
 }
 #CSDN
 {
-	position: fixed;
   	left: 65%;
   	top: 62%;
 }
