@@ -3,6 +3,17 @@
 	font-family: "Bradley Hand ITC"; 
 	src:url("font/Bradley Hand ITC TT Italic.ttf"); 
 }
+html
+{
+	height: 100%;
+	width: 100%;
+}
+body
+{
+	margin:0;
+	height: 100%;
+	width: 100%;
+}
 body::after
 {
 	content: '';
@@ -14,6 +25,11 @@ body::after
 	background-image: url("pic/background.png");
 	background-size: cover;
 	z-index: -1;
+}
+#firstpage
+{
+	height: 90%;
+	width: 100%;
 }
 a
 {
@@ -28,7 +44,7 @@ a
 	left:50%;
 	margin-left: -250px;
     margin-top: -260px;
-	z-index: 10;
+	z-index: 2;
 }
 #photo
 {
@@ -48,7 +64,7 @@ a
 	font-size:90px;
 	font-weight: lighter;
 	font-family: Bradley Hand ITC;
-	color:#3BA4FF;
+	color:#006AC6;
 }
 img.photo
 {
@@ -82,22 +98,19 @@ div.infor
 	padding: 10px;
 	background: rgba(255,255,255,0.4);
 	border-radius: 12px;
-}
-#github,#bangumi,#CSDN
-{
-	position: fixed;
+	position: absolute;
 	transition: 1.2s;
 }
-#github:hover,#bangumi:hover,#CSDN:hover
+.findme:hover
 {
 	-ms-transform:rotate(-7deg);
 	-webkit-transform:rotate(-7deg);
 	transform:rotate(-7deg);
-	transition: 1.2s;
+	transition: all 1.2s;
 }
 #github
 {
-  	left: 20%;
+  	left: 15%;
   	top: 20%;
 }
 #githref
@@ -133,4 +146,69 @@ div.infor
 #csdnhref:active
 {
 	color:#E98383;
+}
+#secondpage
+{
+	position:absolute;
+	width: 100%;
+	height: 110%;
+	margin: 0;
+	z-index: 3;
+}
+#secondpage::after
+{
+	background-color: rgba(237,237,237,0.9);
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#downdown
+{
+	width: 215px;
+	height:36.38px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	font-size:30px;
+	font-weight: lighter;
+	font-family:'HanWangYenThin-2e237545d8242d2';
+	color:#3BA4FF;
+}
+#downnote
+{
+	margin-left:35px;
+	height:36.38px;
+	padding-top: 4px;
+}
+.cover
+{
+	height: 300px;
+}
+.title
+{
+	width: 210px;
+	font-size:18px;
+	font-weight: lighter;
+	font-family:'HanWangYenThin-2e237545d8242d2';
+	color:#3BA4FF;
+}
+li.bangumilist
+{
+	width: 206px;
+	height: 360px;
+	list-style-type:none;
+	float:left;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+h1#blist
+{
+	margin-left: 20px;
+	font-weight: 300;
+	font-family:'HanWangYenThin-2e237545d8242d2';
+	color:#3BA4FF;
 }
