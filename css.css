@@ -1,10 +1,51 @@
-body
+body::after
 {
-	background: #E0E0E0;
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: url("pic/background.png");
+	background-size: cover;
+	z-index: -1;
 }
 a
 {
 	text-decoration: none;
+}
+#self
+{
+	position: absolute;
+	width: 500;
+	height:300;
+	top:50%;
+	left:50%;
+	margin-left: -250px;
+    margin-top: -260px;
+	z-index: 10;
+}
+#photo
+{
+	width: 250;
+	height: 250;
+	margin:auto;
+}
+#name
+{
+	width: 350;
+	margin:auto;
+}
+#fname
+{
+	margin: 0;
+	font-size:80px;
+	font-weight:lighter;
+	color:#68B9FF;
+}
+img.photo
+{
+	border-radius: 20px
 }
 div.icon
 {
@@ -14,19 +55,19 @@ div.icon
 div.infor
 {
 	float: left;
-	height: 50px;
-	margin-left: 40px;
-	margin-top: 15px;
+	height: 80px;
+	margin-left: 70px;
+	margin-top: 23px;
 }
 .findme
 {
 	padding: 10px;
-	background: rgba(255,255,255,0.6);
+	background: rgba(255,255,255,0.4);
 	border-radius: 12px;
 }
 #github
 {
-	position: absolute;
+	position: fixed;
   	left: 20%;
   	top: 20%;
 }
@@ -40,9 +81,9 @@ div.infor
 }
 #bangumi
 {
-	position: absolute;
   	left: 27%;
-  	top: 62%;
+  	top: 70%;
+	position: fixed;
 }
 #bgmhref
 {
@@ -51,4 +92,18 @@ div.infor
 #bgmhref:active
 {
 	color:#EA81B4;
+}
+#CSDN
+{
+	position: fixed;
+  	left: 65%;
+  	top: 62%;
+}
+#csdnhref
+{
+	color:#E35B5B;
+}
+#csdnhref:active
+{
+	color:#E98383;
 }
