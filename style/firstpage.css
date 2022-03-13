@@ -28,7 +28,7 @@ body::after
 }
 #firstpage
 {
-	height: 90%;
+	height: 93%;
 	width: 100%;
 }
 a
@@ -65,6 +65,20 @@ a
 	font-weight: lighter;
 	font-family: Bradley Hand ITC;
 	color:#006AC6;
+	animation:color 1.5s infinite;
+	animation-direction:alternate;
+	animation-timing-function: linear;
+}
+@keyframes color
+{
+	from
+	{
+		color:#8AC5FF;
+	}
+	to
+	{
+		color:#0079E8;
+	}
 }
 img.photo
 {
@@ -74,12 +88,12 @@ img.photo
 	border-width: 5px;
 	border-style: solid;
 	border-color: #DAE7F8;
-	transition: 1s;
+	transition: 0.5s;
 }
 img.photo:hover
 {
-	box-shadow: 10px 10px 6px #63BBBD;
-	transition: 1s;
+	box-shadow: 10px 11px 6px #3A888A;
+	transition: 0.5s;
 }
 div.icon
 {
