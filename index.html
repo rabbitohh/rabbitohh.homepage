@@ -7,7 +7,60 @@
 	<link rel="shortcut icon" type="image/x-icon" href="https://rabbitohh.github.io/favicon.ico">
 	<link href="https://cdn.repository.webfont.com/webfonts/nomal/148178/46296/622c9eb7f629d80f3872ab8c.css" rel="stylesheet" type="text/css"/>
 </head>
+<style>
+	.loading
+	{
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		z-index: 10000;
+	}
+	.center
+	{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	@keyframes chanfont
+	{
+		from
+		{
+			color: rgba(0,0,0,0.55);
+			font-size: 50px;
+			padding-top: 200px;
+		}
+		to
+		{
+			color: rgba(0,0,0,1.00);
+			font-size: 60px;
+			padding-top:0px; 
+		}
+	}
+	#changebg
+	{
+		background: rgba(247,247,247,1.00);
+	}
+	#ntld
+	{
+		width: 400px;
+		height: 82px;
+		padding: 60px;
+		background-color: rgba(255,255,255,0);
+		border-radius: 30px;
+		animation:chanfont 2s;
+		animation-iteration-count:1;
+		font-size: 60px;
+	}
+</style>
 <body>
+	<div class="loading" style="background: rgb(0,0,0);" id="loadwait">
+		<div class="loading center" id="changebg">
+			<div class="center" id="ntld">
+				<div>loading……</div>
+			</div>
+		</div>
+	</div>
 	<div id="firstpage">
 		<div id="self">
 			<div id="photo">

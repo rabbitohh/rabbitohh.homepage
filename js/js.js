@@ -15,3 +15,12 @@ window.onresize=window.onload=function()
 {
 	ChangeHeight();
 }
+function disappear()
+{
+	$("loadwait").style.opacity=0;
+	$("loadwait").style.zIndex=-1;
+}
+document.onreadystatechange=function ()
+{
+	setTimeout(disappear, 2000);
+}
