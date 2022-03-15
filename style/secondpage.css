@@ -1,48 +1,10 @@
-@font-face
-{ 
-	font-family: "Bradley Hand ITC"; 
-	src:url("font/Bradley Hand ITC TT Italic.ttf"); 
-}
-html
-{
-	height: 100%;
-	width: 100%;
-}
-body
-{
-	margin:0;
-	height: 100%;
-	width: 100%;
-}
-body::after
-{
-	content: '';
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-image: url("pic/background.png");
-	background-size: cover;
-	z-index: -1;
-}
 #secondpage
 {
-	position:absolute;
-	width: 100%;
-	margin: 0;
+	border-radius: 30px;
+	width: 93%;
+	margin:auto;
 	z-index: 3;
-}
-#secondpage::after
-{
 	background-color: rgba(237,237,237,0.9);
-	content: '';
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
 }
 #downdown
 {
@@ -50,7 +12,7 @@ body::after
 	height:36.38px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10px;
+	padding-top: 10px;
 	font-size:30px;
 	font-weight: lighter;
 	font-family:'HanWangYenThin-2e237545d8242d2';
@@ -75,14 +37,18 @@ img.cover
 	font-family:'HanWangYenThin-2e237545d8242d2';
 	color:#3BA4FF;
 }
+#bigdiv
+{
+	padding: 0;
+}
 li.bangumilist
 {
-	width: 16%;
-	height: 33.33%;
+	/*width: 16%;
+	height: 33.33%;*/
 	list-style-type:none;
 	float:left;
-	margin-right: 1.7%;
-	margin-left: 1.7%;
+	/*margin-right: 1.7%;
+	margin-left: 1.7%;*/
 }
 h1#blist
 {

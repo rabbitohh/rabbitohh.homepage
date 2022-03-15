@@ -4,56 +4,42 @@
 	<title>rabbitohh</title>
 	<link href="style/firstpage.css" rel="stylesheet">
 	<link href="style/secondpage.css" rel="stylesheet">
+	<link href="style/loadingpage.css" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="https://rabbitohh.github.io/favicon.ico">
 	<link href="https://cdn.repository.webfont.com/webfonts/nomal/148178/46296/622c9eb7f629d80f3872ab8c.css" rel="stylesheet" type="text/css"/>
 </head>
 <style>
-	.loading
+	@font-face
+	{ 
+		font-family: "Bradley Hand ITC"; 
+		src:url("font/Bradley Hand ITC TT Italic.ttf"); 
+	}
+	html
 	{
+		height: 100%;
+		width: 100%;
+	}
+	body
+	{
+		margin:0;
+		height: 100%;
+		width: 100%;
+	}
+	body::after
+	{
+		content: '';
+		height: 100%;
+		width: 100%;
 		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		z-index: 10000;
+		top: 0;
+		left: 0;
+		background-image: url("pic/background.png");
+		background-size: cover;
+		z-index: -1;
 	}
-	.center
-	{
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-	}
-	@keyframes chanfont
-	{
-		from
-		{
-			color: rgba(0,0,0,0.55);
-			font-size: 50px;
-			padding-top: 200px;
-		}
-		to
-		{
-			color: rgba(0,0,0,1.00);
-			font-size: 60px;
-			padding-top:0px; 
-		}
-	}
-	#changebg
-	{
-		background: rgba(247,247,247,1.00);
-	}
-	#ntld
-	{
-		width: 400px;
-		height: 82px;
-		padding: 60px;
-		background-color: rgba(255,255,255,0);
-		border-radius: 30px;
-		animation:chanfont 2s;
-		animation-iteration-count:1;
-		font-size: 60px;
-	}
+
 </style>
-<body>
+<body id="body">
 	<div class="loading" style="background: rgb(0,0,0);" id="loadwait">
 		<div class="loading center" id="changebg">
 			<div class="center" id="ntld">
@@ -62,12 +48,14 @@
 		</div>
 	</div>
 	<div id="firstpage">
-		<div id="self">
-			<div id="photo">
-				<img src="pic/photo.jpg" alt="" height="250" class="photo">
-			</div>
-			<div id="name">
-				<h1 id="fname">rabbitohh</h1>
+		<div style="height:100%;width:100%;" class="center">
+			<div id="self">
+				<div id="photo">
+					<img src="pic/photo.jpg" alt="" height="250" class="photo">
+				</div>
+				<div id="name">
+					<h1 id="fname">rabbitohh</h1>
+				</div>
 			</div>
 		</div>
 		<a href="https://github.com/rabbitohh/" title="my github" id="githref">
@@ -78,7 +66,7 @@
 						</svg>
 				</div>
 				<div class="infor">
-					<font size="5">my<br/>github</font> 
+					<span style="font-size: 25px">my<br/>github</span> 
 				</div>
 			</div>
 		</a>
@@ -90,7 +78,7 @@
 					</svg>
 				</div>
 				<div class="infor">
-					<font size="5">my<br/>bangumi</font> 
+					<span style="font-size: 25px">my<br/>bangumi</span> 
 				</div>
 			</div>
 		</a>
@@ -102,10 +90,16 @@
 					</svg>
 				</div>
 				<div class="infor">
-					<font size="5">my<br/>CSDN</font> 
+					<span style="font-size: 25px">my<br/>CSDN</span> 
 				</div>
 			</div>
 		</a>
+		<ul id="other">
+			<span>其他大佬的个人网站</span>
+			<li><a class="blueblack" href="garryui.cn" style="padding-left: 5px;font-size: 20px;">garryui</a></li>
+			<li><a class="blueblack" href="https://www.funny233.xyz/" style="padding-left: 5px;font-size: 20px;">高坂滑稽果</a></li>
+			<li><a class="blueblack" href="https://zwi0319.github.io/zwi/" style="padding-left: 5px;font-size: 20px;">Weirry Lu</a></li>
+		</ul>
 	</div>
 	<div id="secondpage">
 		<div id="downdown">
@@ -120,7 +114,8 @@
 		</div>
 		<h1 id="blist">我在看的动画/漫画/小说</h1>
 		<div id="watching" style="height: 90%">
-			<ul id="bigdiv" style="height: 100%">
+			<ul id="bigdiv" style="height: 100%; padding-left:40px;padding-right:40px;">
+				<mask1></mask1>
 				<li class="bangumilist">
 					<a href="https://bgm.tv/subject/328447" title="食锈末世录/錆喰いビスコ">
 						<img class="cover" src="https://lain.bgm.tv/pic/cover/l/59/39/328447_8k6Bs.jpg" alt="">
@@ -196,6 +191,7 @@
 			</ul>
 		</div>
 	</div>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/js.js"></script>
 </body>
 </html>

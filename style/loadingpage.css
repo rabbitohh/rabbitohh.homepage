@@ -1,0 +1,44 @@
+.loading
+{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10000;
+}
+.center
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+@keyframes chanfont
+{
+	from
+	{
+		color: rgba(0,0,0,0.55);
+		font-size: 50px;
+		padding-top: 200px;
+	}
+	to
+	{
+		color: rgba(0,0,0,1.00);
+		font-size: 60px;
+		padding-top:60px; 
+	}
+}
+#changebg
+{
+	background: rgba(247,247,247,1.00);
+}
+#ntld
+{
+	width: 400px;
+	height: 82px;
+	padding: 60px;
+	background-color: rgba(255,255,255,0);
+	border-radius: 30px;
+	animation:chanfont 2s;
+	animation-iteration-count:1;
+	font-size: 60px;
+}
