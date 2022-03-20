@@ -1,0 +1,42 @@
+#thirdpage
+{
+	border-radius: 30px;
+	width: 93%;
+	margin:auto;
+	z-index: 3;
+	background-color: rgba(237,237,237,0.64);
+}
+img.cover
+{
+	width:100%;
+	border-radius: 7px;
+}
+.title
+{
+	height: 50px;
+	width: 100%;
+	font-weight: lighter;
+	font-family:'HanWangYenThin-2e237545d8242d2';
+	color:#225887;
+}
+#bigdiv
+{
+	padding: 0;
+}
+li.bangumilist
+{
+	/*width: 16%;
+	height: 33.33%;*/
+	list-style-type:none;
+	float:left;
+	/*margin-right: 1.7%;
+	margin-left: 1.7%;*/
+}
+h1#blist
+{
+	padding-top: 30px;
+	margin-left: 30px;
+	font-weight: 300;
+	font-family:'HanWangYenThin-2e237545d8242d2';
+	color:#225887;
+}

@@ -5,13 +5,7 @@
 	height: 100vh;
 	z-index: 10000;
 }
-.center
-{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-}
+
 @keyframes chanfont
 {
 	from

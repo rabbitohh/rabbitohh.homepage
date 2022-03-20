@@ -4,7 +4,8 @@
 	width: 93%;
 	margin:auto;
 	z-index: 3;
-	background-color: rgba(237,237,237,0.9);
+	background-color: rgba(237,237,237,0.64);
+	height:430px;
 }
 #downdown
 {
@@ -16,44 +17,23 @@
 	font-size:30px;
 	font-weight: lighter;
 	font-family:'HanWangYenThin-2e237545d8242d2';
-	color:#3BA4FF;
+	color:#225887;
 }
 #downnote
 {
-	margin-left:35px;
+	margin-left:3px;
 	height:36.38px;
-	padding-top: 4px;
+	padding-top: 2px;
 }
-img.cover
+#myself
 {
-	width:100%;
-	border-radius: 7px;
-}
-.title
-{
-	height: 50px;
-	width: 100%;
-	font-weight: lighter;
-	font-family:'HanWangYenThin-2e237545d8242d2';
-	color:#3BA4FF;
-}
-#bigdiv
-{
-	padding: 0;
-}
-li.bangumilist
-{
-	/*width: 16%;
-	height: 33.33%;*/
+	float: left;
 	list-style-type:none;
-	float:left;
-	/*margin-right: 1.7%;
-	margin-left: 1.7%;*/
+	margin:0;
+	padding-left:50px;
+	padding-bottom:30px;
 }
-h1#blist
+.coloregg
 {
-	margin-left: 20px;
-	font-weight: 300;
-	font-family:'HanWangYenThin-2e237545d8242d2';
-	color:#3BA4FF;
+	color:rgba(237,237,237,0);
 }

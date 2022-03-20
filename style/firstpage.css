@@ -35,24 +35,31 @@ a
 	padding-bottom: -60px;
 	font-family: Bradley Hand ITC;
 	color:#006AC6;
-	animation:color 1.5s infinite;
-	animation-direction:alternate;
+	animation:color 5s infinite;
 	animation-timing-function: linear;
 }
 @keyframes color
 {
-	from
+	0%
 	{
-		color:#8AC5FF;
+		color: #2F5995;
 	}
-	to
+	33%
 	{
-		color:#0079E8;
+		color: #7393BF;
+	}
+	66%
+	{
+		color: #608fd2;
+	}
+	100%
+	{
+		color: #2F5995;
 	}
 }
 img.photo
 {
-	box-shadow: 7px 7px 4px #63BBBD;
+	box-shadow: 7px 7px 4px #5CA7FB;
 	margin: -5px;
 	border-radius: 20px;
 	border-width: 5px;
@@ -62,7 +69,7 @@ img.photo
 }
 img.photo:hover
 {
-	box-shadow: 10px 11px 6px #3A888A;
+	box-shadow: 10px 11px 6px #557DAD;
 	transition: 0.5s;
 }
 div.icon
@@ -80,16 +87,15 @@ div.infor
 .findme
 {
 	padding: 10px;
-	background: rgba(255,255,255,0.4);
+	background: rgba(255,255,255,0.19);
 	border-radius: 12px;
 	position: absolute;
 	transition: 1.2s;
 }
 .findme:hover
 {
-	-ms-transform:rotate(-7deg);
-	-webkit-transform:rotate(-7deg);
-	transform:rotate(-7deg);
+	padding: 15px;
+	opacity: 1;
 	transition: all 1.2s;
 }
 #github
@@ -136,7 +142,7 @@ div.infor
 	font-size: 25px;
 	padding: 20px;
 	list-style-type:none;
-	background: rgba(255,255,255,0.65);
+	background: rgba(255,255,255,0.28);
 	width: 300px;
 	position: absolute;
 	top:10%;
