@@ -11,6 +11,11 @@ function a()
 		fid(name).style.marginLeft=Math.floor(Math.random()*300+600)+"px";
 	}
 }
+function disappear()
+{
+	fid("loadwait").style.opacity=0;
+	fid("loadwait").style.zIndex=-1;
+}
 function ChangeHeight()
 {
 	var width=document.documentElement.clientWidth;
@@ -33,15 +38,17 @@ function ChangeHeight()
 {
   $("mask1").siblings().css("height",perc+"%");
 });*/
-window.onresize=window.onload=function()
+window.onresize=function()
 {
 	a();
 	ChangeHeight();
 }
-function disappear()
+window.onload=function()
 {
-	fid("loadwait").style.opacity=0;
-	fid("loadwait").style.zIndex=-1;
+	a();
+	ChangeHeight();
+	var ab=fid("naruto").offsetWidth;
+	fid("naruto").style.height=(ab/1920)*1080+"px";
 }
 document.onreadystatechange=function ()
 {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-	<title>rabbitohh</title>
+	<title>rabbitohh的个人主页</title>
 	<link href="style/firstpage.css" rel="stylesheet">
 	<link href="style/secondpage.css" rel="stylesheet">
 	<link href="style/loadingpage.css" rel="stylesheet">
@@ -54,7 +54,46 @@
 		background-size: cover;*/
 		z-index: -1;
 	}
-
+	#other
+	{
+		font-size: 18px;
+		padding: 20px;
+		padding-left:40px;
+		list-style-type:none;
+		width: 300px;
+	}
+	.blueblack
+	{
+		color:black;
+		font-size: 16px;
+		margin-top:10px;
+	}
+	.blueblack:hover,
+	.blueblack:active
+	{
+		color:rgba(41,41,165,1.00)
+	}
+	#foot
+	{
+		padding-left:5%;
+		padding-right:5%;
+		padding-top:30px;
+		padding-bottom:30px;
+		margin-bottom:20px;
+		margin-top:20px;
+		width:70%;
+		margin-left:10%;
+		background:rgba(255,255,255,0.28);
+		border-radius: 10px;
+	}
+	.footh
+	{
+		margin-bottom:10px;
+		padding-bottom:10px;
+		border-bottom-style: solid;
+		border-bottom-color: black;
+		border-bottom-width: thin;
+	}
 </style>
 <body id="body">
 	<div class="loading" style="background: rgb(0,0,0);" id="loadwait">
@@ -111,12 +150,6 @@
 				</div>
 			</div>
 		</a>
-		<ul id="other">
-			<span>其他大佬的个人网站</span>
-			<li><a class="blueblack" href="http://garryui.cn/" style="padding-left: 5px;font-size: 20px;">GARRY</a></li>
-			<li><a class="blueblack" href="https://www.funny233.xyz/" style="padding-left: 5px;font-size: 20px;">高坂滑稽果</a></li>
-			<li><a class="blueblack" href="https://zwi0319.github.io/zwi/" style="padding-left: 5px;font-size: 20px;">Weirry Lu</a></li>
-		</ul>
 	</div>
 	<div id="secondpage">
 		<div id="downdown" class="center">
@@ -251,6 +284,17 @@
 			</ul>
 		</div>
 	</div>
+	
+	<!--<iframe id="naruto" style="width:40%;margin-left:30%;" src="https://player.bilibili.com/player.html?aid=847457363&bvid=BV1wL4y1v7sS&cid=392685039&page=1&danmaku=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>-->
+	<div id="foot">
+		<ul id="other">
+			<div class="footh">膜拜</div>
+			<li class="blueblack"><a class="blueblack" href="http://garryui.cn/">GARRY</a></li>
+			<li class="blueblack"><a class="blueblack" href="https://www.funny233.xyz/">高坂滑稽果</a></li>
+			<li class="blueblack"><a class="blueblack" href="https://zwi0319.github.io/zwi/">Weirry Lu</a></li>
+		</ul>
+	</div>
+	
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/js.js"></script>
 </body>

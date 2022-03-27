@@ -140,24 +140,3 @@ div.infor
 {
 	color:#E98383;
 }
-#other
-{
-	font-size: 25px;
-	padding: 20px;
-	list-style-type:none;
-	background: rgba(255,255,255,0.28);
-	width: 300px;
-	position: absolute;
-	top:10%;
-	right:10%;
-	border-radius: 20px;
-}
-.blueblack
-{
-	color:black;
-}
-.blueblack:hover,
-.blueblack:active
-{
-	color:rgba(41,41,165,1.00)
-}
