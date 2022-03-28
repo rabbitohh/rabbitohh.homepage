@@ -3,9 +3,8 @@
 	border-radius: 30px;
 	width: 93%;
 	margin:auto;
-	z-index: 3;
 	background-color: rgba(237,237,237,0.64);
-	height:430px;
+	height:500px;
 }
 #downdown
 {
@@ -27,13 +26,28 @@
 }
 #myself
 {
+	position: absolute;
+	z-index: 1;
 	float: left;
 	list-style-type:none;
 	margin:0;
-	padding-left:50px;
+	padding-left: 120px;
 	padding-bottom:30px;
+}
+.rightl
+{
+	padding-left: 50px;
+	padding-top:10px;
+	padding-bottom: 10px;
 }
 .coloregg
 {
 	color:rgba(237,237,237,0);
+}
+#eggs
+{
+	position: absolute;
+	float: left;
+	width:90%;
+	height:350px;
 }
