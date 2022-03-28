@@ -14,9 +14,6 @@ a
 	height:380px;
 	/*padding-right: 140px;*/
 	z-index: 2;
-	image-rendering: -webkit-optimize-contrast;
-	/*image-rendering: optimize-contrast;
-	image-rendering: crisp-edges;*/
 }
 #photo
 {
@@ -69,6 +66,9 @@ img.photo
 	border-style: solid;
 	border-color: #DAE7F8;
 	transition: 0.5s;
+	/*image-rendering: crisp-edges;*/
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
 }
 img.photo:hover
 {
