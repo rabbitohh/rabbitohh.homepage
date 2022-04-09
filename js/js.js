@@ -47,10 +47,5 @@ window.onload=function()
 {
 	a();
 	ChangeHeight();
-	var ab=fid("naruto").offsetWidth;
-	fid("naruto").style.height=(ab/1920)*1080+"px";
-}
-document.onreadystatechange=function ()
-{
-	setTimeout(disappear, 2000);
+    setTimeout(disappear, 2000);
 }
