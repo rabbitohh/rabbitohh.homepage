@@ -2,7 +2,7 @@
 <html style="width:100%;height:100%;">
 <head>
 	<meta charset="utf-8">
-	<title>还有多久放学啊</title>
+	<title>还有多久放假啊</title>
 	<link href="https://cdn.repository.webfont.com/webfonts/nomal/148178/48196/6246a760f629d8099ce5425e.css" rel="stylesheet" type="text/css"/>
 </head>
 <style>
@@ -54,43 +54,21 @@
 </style>
 <body style="width:100%;height:100%;margin:0;color:white;">
     <div style="width:100%;height:100%;" class="center">
-        
+
         <div >
-            <div style="clear:both;font-size: 80px;">距离放学还有</div>
-            <div style="width:445px;margin:auto">
-                <div id="hour" class="mem">time</div>
-                <div class="mao">:</div>
-                <div id="minute" class="mem">time</div>
-                <div class="mao">:</div>
-                <div id="second" class="mem">time</div>
-                <div class="mao">:</div>
-                <div id="msecond" class="mem" style="width:105px;">time</div>
-                <div style="clear:both;"></div>
-            </div>
-    	</div>	
+            <span style="font-size: 60px;">本学期还可卷/摆</span>
+            <span style="font-size: 60px;" id="tm">time</span>
+			<span style="font-size: 60px;">天</span>
+    	</div>
     </div>
 	<script>
 		function time()
 		{
 			var d = new Date();
-			var tot=63000000-((d.getTime()+28800000)%86400000);
-			if(tot<=0) tot+=86400000;
-			var hour=Math.floor(tot/3600000);
-			tot%=3600000;
-			var minute=Math.floor(tot/60000);
-			tot%=60000;
-			var second=Math.floor(tot/1000);
-			tot%=1000;
-			var msecond=tot;
-			if(hour<=9) document.getElementById("hour").innerHTML="0"+hour;
-			else document.getElementById("hour").innerHTML=hour;
-			if(minute<=9) document.getElementById("minute").innerHTML="0"+minute;
-			else document.getElementById("minute").innerHTML=minute;
-			if(second<=9) document.getElementById("second").innerHTML="0"+second;
-			else document.getElementById("second").innerHTML=second;
-            if(msecond<=9) document.getElementById("msecond").innerHTML="00"+msecond;
-            else if(msecond<=99) document.getElementById("msecond").innerHTML="0"+msecond;
-			else document.getElementById("msecond").innerHTML=msecond;
+			var tot=1672156800000-d.getTime();
+			if(tot<=0) tot=0;
+			var tm=tot/86400000;
+			document.getElementById("tm").innerHTML=tm.toFixed(6);
 			setTimeout(time, 20);
 		}
 		window.onload=function()
@@ -98,6 +76,6 @@
 			time();
 		}
         </script>
-	
+
 </body>
 </html>
