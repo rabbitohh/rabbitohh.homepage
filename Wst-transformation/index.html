@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>王书童变换</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+	</script>
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<style>
+	body::after
+	{
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background:linear-gradient(to left top, rgb(219, 234, 254), rgb(147, 197, 253), rgb(59, 130, 246));
+		/*background:linear-gradient(to right top, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));*/
+		/*background-image: url("pic/background.png");
+		background-size: cover;*/
+		z-index: -1;
+	}
+	div
+	{
+		text-indent:2em;
+		margin:30px;
+		line-height:50px;
+		font-size:30px;
+	}
+</style>
+
+<body>
+	<h1 style="font-size: 50px;text-align: center;">狭义相对论补充节：王书童变换</h1>
+	<div style="font-size: 25px;">
+		引言：进入21世纪，20世纪的狭义相对论（Special Theory of Relativity）显然已经过时，而王书童变换（Wst transformation），如同一颗新星，正在照亮整个科学界。
+	</div>
+	<div>
+		根据王书童定律（Wst's law），反应速率等于浓度差比时间差，则已知： $ v=\frac{\Delta c}{\Delta t} $。
+	</div>
+	<div>
+		不难发现，c为光速，且$\Delta t$在$\mathbb{R}^+$中可任取，于是令$\Delta t$趋近于负无穷，则有$v=\lim_{t\to 0} \frac{\Delta c}{\Delta t}=a_c$，其中$a_c$为光加速度。对于光，$v=c$，因此有$c=a_c$。而$a_c$为$c$对时间的一阶导，因此$c=a_c=c'(t)$。故$c=0$或$c=e^t$。
+	</div>
+	<div>
+		若$c=0$，则$c$为常量，因此$\Delta c=0$。故$v=\frac{\Delta c}{\Delta t}=0$，因此物体不可能运动。可得出王书童第一变换（Wst first transformation）：
+		<div style="text-align: center;margin-top: 0">
+			$\left\{
+			\begin{aligned}
+			x^{\prime} & =  x \\
+			y^{\prime} & =  y \\
+			z^{\prime} & =  z \\
+			t^{\prime} & =  t \\
+			\end{aligned}
+			\right.$
+		</div>
+	</div>
+	<div>
+		若$c=e^t$，则$v=a_c=c=e^t$。因此，所有物体均作加速运动。而本征系与观测系间位移差$\Delta x=\int_{0}^{t}\frac{dx}{dt}=e^t$。可得出王书童第二变换（Wst second transformation）:
+		<div style="text-align: center;margin-top: 0">
+			$\left\{
+			\begin{aligned}
+			x^{\prime} & =  x-e^t \\
+			y^{\prime} & =  y \\
+			z^{\prime} & =  z \\
+			t^{\prime} & =  t \\
+			\end{aligned}
+			\right.$ 
+		</div>
+	</div>
+	<div>
+		而物体运动规律仅可能有一个，因此将两方程组联立，得到$e^t=0$，因此$t \to -\infty$。可得到王书童变换（Wst transformation）的一般形式：
+		<div style="text-align: center;margin-top: 0">
+			$\left\{
+			\begin{aligned}
+			x^{\prime} & =  x \\
+			y^{\prime} & =  y \\
+			z^{\prime} & =  z \\
+			t^{\prime} &\to -\infty \\
+			\end{aligned}
+			\right.$ 
+		</div>
+	</div>
+	<div>
+		我们可以由此得知，任何物体、参考系都不会运动，任意参考系下时间趋于负无穷且不会流动。
+	</div>
+	<div style="text-align: right;font-size:25px;">本文作者：张建熙，鲁潇阳，张博文，李沛霖</div>
+</body>
