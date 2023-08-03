@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <title>Random Problem Codeforces</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://sta.codeforces.com/s/11868/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://sta.codeforces.com/s/11868/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://sta.codeforces.com/s/11868/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://sta.codeforces.com/s/11868/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://sta.codeforces.com/s/11868/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://sta.codeforces.com/s/11868/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://sta.codeforces.com/s/11868/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sta.codeforces.com/s/11868/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://sta.codeforces.com/s/11868/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sta.codeforces.com/s/11868/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://sta.codeforces.com/s/11868/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sta.codeforces.com/s/11868/favicon-16x16.png">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="name">选择任务的复杂性及其主题。 或者只需点击“生成！”</div>
+    <div class="oneLine">
+        <p id="min_num_text">最低评级</p>
+        <p id="max_num_text">最高评级</p>
+    </div>
+    <div class="oneLine up">
+        <div id="rating">问题评级：</div>
+        <div class="oneLine">
+            <input type="number" id="min_num" placeholder="0">
+            <input type="number" id="max_num" placeholder="3800">
+        </div>
+    </div>
+    <div class="oneLine">
+        <div id="tags">Tag：</div>
+        <select id="choose">
+            <option id="choose-child">Choose tag</option>
+        </select>
+    </div>
+    <div class="oneLine down">
+        <input type="checkbox" id="doNotShowTags">
+        <label id="doNotShowTags-label" for="doNotShowTags">不显示任务主题</label>
+        <button type="button" id="start">生成！</button>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
