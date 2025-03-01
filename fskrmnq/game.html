@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr" style="width:100%;height:100%;">
+    <head>
+        <meta charset="utf-8">
+        <title>焚书坑儒模拟器</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <style>
+            @font-face
+            {
+                font-family: 'LiXuKeMaoBiXingShu';
+                src: url('LiXuKeMaoBiXingShu-1.ttf');
+            }
+            .center
+            {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }
+            .cursor-effect
+            {
+                position: fixed; width: 60px; height: 60px; pointer-events: none;
+                animation: fadeOut 3s forwards; font-size: 60px; color: red;
+                font-family: 'LiXuKeMaoBiXingShu';
+            }
+            @keyframes fadeOut
+            {
+                0%{opacity: 0.5;transform: scale(1);}
+                100%{opacity: 0;transform: scale(1.5);}
+            }
+            .noselect
+            {
+                user-select: none;
+            }
+            .text
+            {
+                color:black;
+                font-size: 6vmin;
+            }
+            .animate-jelly {
+                animation: jelly 0.4s ease;
+            }
+        </style>
+        <script type="text/javascript">
+            var a = 0;
+            var b = 0;
+            var unlockedEffect = false;
+            let isAnimating = false;
+
+            function check() {
+                if (a == 0) alert("您已通关");
+                if (b == 1)
+                {
+                    alert("您已斩杀 1 人，解锁秦始皇立绘");
+                    var qsh = $('<img src="Qinshihuang.png" style="z-index:-1;height:80%; position:fixed; top:10%;"></img>');
+                    document.body.appendChild(qsh[0]);
+                }
+                if (b == 2) {
+                    alert("您已斩杀 2 人，解锁超帅打击特效");
+                    unlockedEffect = true;
+                    // 动态创建样式表
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        #btn
+                        {
+                            /* 帝王配色 */
+                            background: linear-gradient(45deg, #1a0d00 0%, #2c1a0a 100%);
+                            border: 3px solid #d4af37;
+                            color: #fff3d9 !important;
+                            text-shadow: 1px 1px 2px #8b0000;
+                            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5),
+                            inset 0 0 15px rgba(139, 0, 0, 0.3);
+
+                            /* 基础形态 */
+                            border-radius: 100px;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                            position: relative;
+                            overflow: hidden;
+                            transform-origin: center center;
+                            backface-visibility: hidden;
+                            will-change: transform;
+                            font-family:LiXuKeMaoBiXingShu;
+                        }
+
+                        /* 果冻动画 */
+                        @keyframes jelly
+                        {
+                            0% { transform: translate(-50%, -50%) scale(1); }
+                            30% { transform: translate(-50%, -50%) scale(0.9); }
+                            60% { transform: translate(-50%, -50%) scale(1.05); }
+                            80% { transform: translate(-50%, -50%) scale(0.97); }
+                            100% { transform: translate(-50%, -50%) scale(1); }
+                        }
+
+
+
+                        /* 悬停流光效果 */
+                        #btn:hover:before
+                        {
+                            content: "";
+                            position: absolute;
+                            top: -50%;
+                            left: -50%;
+                            right: -50%;
+                            bottom: -50%;
+                            background: linear-gradient(
+                                45deg,
+                                transparent 20%,
+                                rgba(212, 175, 55, 0.2) 50%,
+                                transparent 80%
+                            );
+                            animation: flow 2s linear infinite;
+                        }
+
+                        @keyframes flow
+                        {
+                            0% { transform: translateX(-100%) rotate(45deg); }
+                            100% { transform: translateX(100%) rotate(45deg); }
+                        }
+                    `;
+                    document.head.appendChild(style);
+
+                }
+                if (b==4) {
+                    alert("您已斩杀 4 人，解锁背景");
+                    $('body').css('background-image', 'url(bg.png)');
+                    $('body').css('background-size', '100% 100%');
+                    $('body').css('background-repeat', 'no-repeat');
+                    $('.text').css('color', 'white');
+                    $('.text').css('text-stroke', '1px black');
+                }
+            }
+
+            $(document).ready(() => {
+                $('#btn').on('click', function (e) {
+                    if(isAnimating) return;
+                    a = document.getElementById("lst").innerHTML;
+                    b = document.getElementById("kld").innerHTML;
+                    if(a == 0) {
+                        alert("您的国家已经没有公民了。");
+                        return;
+                    }
+                    a--;
+                    b++;
+                    document.getElementById("lst").innerHTML = a;
+                    document.getElementById("kld").innerHTML = b;
+                    check();
+
+                    if (unlockedEffect) {
+                        // 杀字特效
+                        const $effect = $('<div class="cursor-effect noselect">杀</div>').css({
+                            left: e.clientX - 30,
+                            top: e.clientY - 30
+                        });
+                        $('body').append($effect);
+                        setTimeout(() => $effect.remove(), 3000);
+
+                        const $btn = $(this);
+
+                       if (!isAnimating)
+                       {
+                           isAnimating = true;
+                           $btn.removeClass('animate-jelly');
+                           requestAnimationFrame(() => {
+                               requestAnimationFrame(() => {
+                                   $btn.addClass('animate-jelly');
+                               });
+                           });
+                           $btn.one('animationend', () => {
+                               $btn.removeClass('animate-jelly');
+                               isAnimating = false;
+                           });
+                       }
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body style="width:100%;height:100%;margin:0;background-color:white;">
+        <div class="center noselect" style="font-size:30px;padding-top:5%;">
+            <span class="text">剩余人口：</span>
+            <span class="text" id="lst">100</span>
+        </div>
+        <div class="center noselect" style="font-size:30px">
+            <span class="text">已斩杀：</span>
+            <span class="text" id="kld">0</span>
+        </div>
+        <button id="btn" class="btn noselect" style="position:fixed;width: 30vmin;height: 30vmin;font-size: 15vmin;top:50%;left:50%;transform:translate(-50%,-50%);">斩</button>
+    </body>
+</html>

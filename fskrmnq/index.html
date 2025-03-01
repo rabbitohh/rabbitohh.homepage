@@ -1,13 +1,40 @@
 <!DOCTYPE html>
-<html lang="zh" style="width:100%;height:100%;">
+<html>
 <head>
-	<title>ä½  è¢« éª— äº†</title>
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            /* Ê¹ÓÃflex²¼¾ÖÊµÏÖ¾ÓÖÐ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .game-container {
+            width: 120vmin;
+            aspect-ratio: 16/11;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        .game-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
-<style>
-</style>
-<body style="width:100%;height:100%;">
-	<iframe style="width:100%;height:100%;" src="https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&page=1&danmaku=1&high_quality=1&t=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<body>
+    <div class="game-container">
+        <!-- ¸ù¾ÝÄãµÄÓÎÏ·ÀàÐÍÑ¡ÔñÒÔÏÂÆäÖÐÒ»ÖÖ -->
+        <!-- Èç¹ûÊÇiframe -->
+        <iframe src="game.html" class="game-iframe"></iframe>
+
+        <!-- Èç¹ûÊÇcanvas -->
+        <!-- <canvas class="game-canvas"></canvas> -->
+    </div>
 </body>
 </html>
-
